@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeTracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logoName">
+          TimeTracker
+        </div>
+        <!-- logoName div-->
+        <div class="navlink">
+          <ul id="navlinklist">
+            <a href="#"><li id="darkmode">Dark/light Mode</li></a>
+            <a href="#"><li id="setting">Setting</li></a>
+            <a href="#"><li id="aboutTimetracker">About</li></a>
+            
+          </ul>
+
+        </div>
+        <!-- navlink div-->
+      </div>
+      <!-- navbar div-->
+      <hr />
+     
+<!-- Setting container HTML -->
+      <div id="settingcontainer">
+        <div class="seetingtext">
+          <span class="settingtext">Setting</span><button class="btnCloseSetting" onclick="hidediv()">Close</button>
+        </div>
+        <hr class="settingline" />
+        <!-- setting time div -->
+
+        <div class="setTimeMinutes">Time(Minutes)</div>
+        <!-- input box for Work time minutes -->
+        <div class="minutinputcontainer">
+          <div class="inputcontainer">
+            <label for="worktimeinput">Work Time</label>
+            <input
+              type="number"
+              id="workMinutesInput"
+              class="workinput"
+              value="1"
+            />
+          </div>
+ <!-- input box for Short Break time minutes -->
+          <div class="inputcontainer">
+            <label for="worktimeinput">Short Break</label>
+            <input
+              type="number"
+              id="shortbreakminutes"
+              class="workinput"
+              value="1"
+            />
+          </div>
+ <!-- input box for Long Break time minutes -->
+          <div class="inputcontainer">
+            <label for="worktimeinput">Long Break</label>
+            <input
+              type="number"
+              id="longbreakinput"
+              class="workinput"
+              value="1"
+            />
+          </div>
+        </div>
+        <hr class="settingline" />
+        <!-- Auto setting of worktime and breaktime -->
+         <div class="autostartbreak">Set Alarm ON/Off
+         <input type="checkbox" id="audioToggle" checked></div>
+<hr class="settingline" />
+<!--  total work session -->
+   <div class="autoworksession_container"><label>Total Work Session</label>
+  <input
+              type="number"
+              id="workSession"
+              
+              value="4"
+            />
+         </div>
+<hr class="settingline" />
+
+<!-- Work cycle container -->
+ <div class="autoworkcycle_container"><label>Total Work cycle</label>
+  <input
+              type="number"
+              id="workCycle"
+              
+              value="2"
+            />
+         </div>
+<hr class="settingline" />
+
+         <!-- close button of setting container -->
+        <button id="okbutton" onclick="hidediv()">OK</button>
+      </div>
+
+      <!-- Show Timer Container -->
+      <div class="timecontainer">
+        <div class="btncontainer">
+          <button
+            class="worktime btnsetwork"            
+          >
+            WorkTime
+          </button>
+
+          <button
+            id="shortbreak"
+            class= "shortbreak btnsetwork"
+                      >
+            Short Break
+          </button>
+
+          <button
+            id="longbreak"
+            class="longbreak btnsetwork"
+            
+          >
+            Long Break
+          </button>
+        </div>
+        <div id="time">1</div>
+        <div class="startPauseResume_container">
+        <button id="start" class="btnstart">Start</button>
+        <button id="pause" class="btnstart">Pause</button>
+        <button id="resume" class="btnstart">Resume</button>
+        <button id="reset" class="btnstart">Reset</button>
+      </div>
+      </div>
+      <div class="title"></div>
+      <!-- show time div-->
+      <p class="motivateQuote title"></p>
+      
+      <!-- audio file -->
+      <audio id="piano" src="Assets/sound/piano.mp3"></audio>
+      <!--work cycle counts  -->
+      <div class="work_cycle_display">
+        <span class="workCycleCounts">0</span>
+        <p>work Cycle completed</p>
+      </div>
+      <hr class="hrtask" />
+      <!-- task container -->
+    <button class="btnaddtask">Add Task</button>
+<div class="inputtaskContainer">
+        
+          <input type="text" class="taskInput" placeholder="Enter your Task"/>
+          <button class="addTaskButton">Add</button>
+          <button class="taskOkbutton">OK</button>
+              </div>
+              <div class="taskList_container">
+                <ul class="task_list">
+
+                </ul>
+              </div>
+              <!-- About TimeTracker -->
+      <div class="aboutus">
+        <div class="top">
+        <span>TimeTracker</span>
+        <button class="closeAbout">close</button></div>
+       <div class="appdetail">
+        <p>
+          Timer Tracker is used to focus on work.It is based on pomodoro timer.some features are customizable. <br><br>
+          <strong>
+          customizable Setting TimerTracker features :</strong><br><br>
+          <strong>Dark Mode:</strong> Click on Dark mode to switch between dark and light mode.<br><br>
+          
+         <b> Alarm:</b> Checked for Alarm on/off.<br><br>
+          <b>Work Session:</b>increase work time and Work session accourdinig to task and for stop timer after a fixed time.<br><br>
+          <b>Short Break:</b>Set Short Break Time.<br><br>
+          <b>Long Break</b>
+          set a Number of work session for Long Break.<br><br>
+          <b>work Cycle:</b>
+          Set a work Cycle for long break.
+ <b>Alarm:</b>
+          Set Alarm form setting.
+
+        </p></div>
+               </div>
+      
+    </div>
+    <!-- container div-->
+
+    <!-- text container  -->
+    <div class="aboutTimeTrackerontainer">
+      <div class="text">
+        What is TimeTracker?</div>
+        <div class="textdetail">
+          TimerTracker app is very helpful  to work and study. The technique uses a timer to break down work into work time intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a work session. </div>
+      <div class="text">
+        What is Work cycle?</div>
+        <div class="textdetail">
+                  Work Cycle is Decided a Long Break  after a fixed number of work session. </div>
+<div class="text">How to use TimeTracker?</div>
+        <div class="textdetail">
+        <p><strong> Work Session:</strong> Add estimated work session. one work session is 25 minutes with short break of 5 minutes. Automatically Timer is off after a Fixed work session complete.
+        </p>
+        <p><strong> Work Cycle:</strong> Add estimated work Cycle for Long Break.Long break will running after a fixed work session (like after 2 and 4 session).
+        </p>
+        <p><strong> Start Timer:</strong> Start Timer and you have automatically get short break for 5 minutes and the alarm ring.
+        </p>
+          <p><strong> Fixed Work Session:</strong>Timer stop after a Fixed Work session automatically and ring alarm.</p>
+            <p><strong> Alarm :</strong>Alarm is on when work session end and short break start.
+<p><strong> KeyBoard Shortcut</strong>
+  <h5>Start time</h4> press s key from
+     keyboard for start.
+     <h5>Pause time</h4> press p key from keyboard for pause time.
+      <h5>Resume time</h4> press r key from keyboard for resume time.
+        <h5>Reset time</h4> press e key from keyboard for reset time.
+        </p>
+
+             <p><strong> customizable:</strong> All features of Timer is cutomizable from setting in navigation bar.User can choose work time, short break, long break with work session and work cycle.
+        </p>
+        </p>
+        </p>
+
+        </div>
+
+          
+          </div>
+          
+
+    <!-- Java Script Link -->
+    <script src="script.js"></script>
+  </body>
+</html>

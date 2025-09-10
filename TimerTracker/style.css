@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   font-family:Verdana, Geneva, Tahoma, sans-serif; 
+   color: var(--blue);
+    
+}
+.dark-mode{
+ --orange: black;
+  --yellow:#2c2c2c;
+  --lemon:#1c1c1c;
+  --darkblue:#fff;   
+  --white:#ffff;
+  --darkorange:rgb(92, 91, 91);
+  --whitesmoke:rgb(77, 71, 71);
+   --blue:#fff;
+}
+:root {
+  --orange: #ffbc4c;
+  --yellow: #ffde63;
+  --lemon:#feffc4;
+  --darkblue:#01010d;
+  --darkorange:#ffbc0c;
+  --whitesmoke:whitesmoke;
+  --grey:rgb(227, 225, 225);
+  --white:#ffff;
+  --blue:#0f0f36;
+  
+  .title{
+    font-size:xx-large;
+    color: var(--whitesmoke);
+    font-weight: 600;
+    text-align: center;
+  }
+}
+#autoBreak{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;  
+    background-color: #fff;  
+}
+  /* color: var(--orange); */
+/* setting conainer */
+#settingcontainer{
+    width: 300px;
+    height: 600px;
+    background-color: var(--whitesmoke);
+     display: none; 
+    border-radius: 5px;
+    margin-left: 150px;
+    margin-top: 70px;
+    position: absolute;
+    z-index: 10000000;
+    }
+    .seetingtext{
+        margin: 20px 10px;
+        display: flex;
+        justify-content:space-between;    
+
+    }
+.settingtext{
+   padding-left: 10px;
+   
+}
+.settingline{
+    width: 100%;
+    height: 2px;
+    margin-top: 30px;
+    
+    margin-bottom: 5px;
+    }
+    .setTimeMinutes{
+        padding: 10px;
+        font-size:small;
+        margin-bottom: 20px;
+    }
+    .minutinputcontainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .inputcontainer{
+        width: 30%;
+        font-size: smaller;
+    }
+    .workinput{
+        width: 90%;
+        border: none;
+        background-color:var(--grey) ;
+        padding: 9px 10px;
+    margin-top: 5px;
+    margin-left:2px;
+        border-radius: 5px;
+        outline: none;
+    }
+.workinput::-webkit-inner-spin-button {
+  opacity: 2;
+}
+.autostartbreak{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#okbutton{
+    margin: 10% 50%;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: var(--white);
+    background-color: var(--darkblue);
+    opacity: 0.8;
+    font-size: larger;
+    
+}
+.btnCloseSetting{
+    border: none;
+    font-size: large;
+}
+
+  .container{
+    background-color: var(--orange);
+    height: 850px;
+    min-width: 400px;
+    display: flex;   
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .textcontainer{
+    background-color:var(--white);
+        display: flex;   
+    align-items: center;
+    flex-direction: column;
+    color: var(--darkblue);
+  }
+.navbar{
+        height: 70px;    
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.logoName{
+    margin-right: 100px;
+    font-size: xx-large;
+    color:var(--darkblue);
+    font-weight: 700;
+    letter-spacing:  0.4;
+    line-height:1.5px;
+}
+#navlinklist{
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+   }
+   #navlinklist  a {
+    text-decoration: none;
+    font-size: larger;
+    padding: 10px 20px;
+    background-color: var(--lemon);
+    border-radius: 5px;
+    color: var(--darkblue);
+        
+    }
+    hr{
+        width: 900px;
+        /* margin-left: 200px; */
+        background-color: var(--darkblue);
+        height: 1px;
+        border: none;
+        opacity: 0.2;
+    }
+    #progressBarContainer{
+        width: 900px;
+         height: 2px; 
+         background-color: #181818;
+         
+    }
+    #audioToggle{
+        width: 30px;
+        height: 30px;
+        
+        
+    }
+   #progressBar{
+   width: 0%;
+    height: 5px;
+     background-color: #fff;
+   }
+/* show time Container css */
+.timecontainer{
+    width: 450px;
+    height: 320px;
+    border-radius: 8px;
+    background-color: var(--yellow);
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    /* gap: 20px; */
+    /* padding: 20px 0; */
+}
+.btncontainer{
+    /* margin-bottom: 50px; */
+}
+
+.btnsetwork{
+    margin-right: 10px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--darkorange);
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+    color:(var(--blue));
+}
+/* .btnsetwork:active{
+    background-color: azure;
+} */
+#time{
+    color:var(--blue);
+    font-size: 70px;
+    font-weight: 800;
+}
+.startPauseResume_container{
+    display: flex;
+    gap:10px
+}
+.btnstart{
+    width: 80px;
+    padding: 5px 12px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    /* letter-spacing: 0.5px; */
+    border: none;
+    border-radius: 2px;
+    box-shadow: 2px 2px 6px 6px var(--yellow);
+    cursor: pointer;
+    background-color: var(--lemon);
+    color:var(--blue)
+}
+.hrtask{
+    width: 450px;
+    margin-bottom: 20px;
+    color: var(--darkorange);
+}
+.taskaction{
+    width: 450px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.work_cycle_display{
+    display: none;
+    justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    margin-top: 30px;
+}
+.work_cycle_display span{
+    font-size: 40px;
+    color: white;
+}
+.work_cycle_display p{
+    color: white;
+}
+.textcontainer{
+    background-color:#fff;
+    color:black ;
+}
+.autoworkcycle_container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    #workCycle{
+        width: 40px;
+        text-align: center;
+        height: 40px;
+    }
+}
+.autoworksession_container{
+  margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    #workSession{
+         width: 40px;
+        text-align: center;
+        height: 40px;
+    }  
+}
+.btnaddtask{
+    background-color: var(--lemon);
+    width: 450px;
+    padding: 15px 20px;
+    border: 1px dashed var(--orange);
+    color: var(--darkblue);
+    font-size: larger;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 50px;
+    
+}
+
+ 
+.inputtaskContainer{
+    background-color: var(--darkorange);
+    height: 300px;
+    width: 400px;
+    position: absolute;
+margin-top: 400px;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+display: none;
+
+.taskInput{
+    height: 60px;
+    width: 300px;
+    margin:50px;
+    outline: none;
+    border: none;
+    font-size: x-large;
+    padding: 10px;
+}
+.addTaskButton{
+    width: 100px;
+    padding: 10px 10px;
+    height: 40px;
+    margin: 10px;
+    margin-left: 80px;
+    background-color: var(--lemon);
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: x-large;
+}
+}
+.taskOkbutton{
+    margin-left: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: var(--white);
+    background-color: var(--darkblue);
+    opacity: 0.8;
+    font-size: larger;
+    
+
+}
+.task_list{
+    /* background-color: var(--whitesmoke); */
+    padding: 20px;
+    list-style: none;
+    width: 200px;
+    max-width: auto;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+    li{
+        background-color: var(--blue);
+        color: whitesmoke;
+        padding: 5px 5px;
+        border-radius: 5px;
+                
+    }
+}
+.aboutTimeTrackerontainer{
+        height: auto;
+       display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: var(--whitesmoke);
+        .text{
+        text-align:left;       
+         width: 300px;
+         font-size: x-large;
+         margin-top: 20px;
+         font-weight: 700;
+         margin-left: 100px;
+    }
+    .textdetail{
+        width: 500px;
+        font-size: larger;
+        color: rgb(9, 9, 11);
+        padding: 10px;
+        line-height: 2;
+        margin-left: 200px;
+    }
+}
+.aboutus{
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 600px;
+    background-color: var(--whitesmoke);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    display: none;
+}
+    .top{
+        width: 400px;
+        height: 30px;
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 800;
+    }
+    .closeAbout{
+         padding:0 10px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         font-weight: 700;
+         background-color: var(--orange);
+    }
+    
+    p{
+        font-size: large;
+    }
+
+@media screen and (max-width: 786px){
+
+.logoName{
+        font-size: large;
+    }
+#navlinklist{
+        gap: 5px;
+       }
+   #navlinklist  a {    
+    font-size: small;
+    padding: 5px 5px;
+     }
+    hr{
+        width: 450px;
+           } 
+           .aboutTimeTrackerontainer{
+        height: auto;
+       display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: var(--whitesmoke);
+        .text{
+         margin-left: 0;
+    }
+    .textdetail{
+        
+        margin-left:0;
+    }
+}
+.aboutus{
+    margin-left: 10px;
+}
+           
+           
+}
